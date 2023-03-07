@@ -1,10 +1,10 @@
-public class HeladoSuaveConTopping implements Helado{
+public class HeladoSuaveConGalleta implements Helado{
     protected Helado helado;
 
-    protected String description = " con topping extra";
-    protected int price = 20;
+    protected String description = " con galleta extra";
+    protected int price = 15;
 
-    public HeladoSuaveConTopping(Helado helado){
+    public HeladoSuaveConGalleta(Helado helado){
         this.helado = helado;
     }
 

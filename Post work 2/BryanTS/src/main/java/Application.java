@@ -6,11 +6,16 @@ public class Application{
 
         Helado heladoSuave = new HeladoSuave();
 
-        Helado heladoSauveConCobertura = new HeladoSuaveConCobertuna(heladoSuave);
+        heladoSuave = new HeladoSuaveConCobertura(heladoSuave);
+        heladoSuave = new HeladoSuaveConTopping(heladoSuave);
+        heladoSuave = new HeladoSuaveConGranola(heladoSuave);
 
-        /*
+        heladoSuave = new HeladoSuaveConMermelada(heladoSuave);
+        heladoSuave = new HeladoSuaveConGalleta(heladoSuave);
+
+
         System.out.println("[Ticket de compra]");
-        System.out.println(heladoSauveConCobertura.getDescription());
-        System.out.println(heladoSauveConCobertura.getPrice());*/
+        System.out.println(heladoSuave.getDescription());
+        System.out.println("$" + heladoSuave.getPrice());
     }
 }
