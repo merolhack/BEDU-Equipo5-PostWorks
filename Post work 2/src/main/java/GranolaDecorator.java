@@ -14,11 +14,11 @@ public class GranolaDecorator implements IIceCream {
 
     @Override
     public String getDescription() {
-        return iceCream.getDescription() + ", with extra cookie";
+        return iceCream.getDescription() + ", with extra granola";
     }
 
     @Override
     public int getPrice() {
-        return iceCream.getPrice() + 15;
+        return iceCream.getPrice() + 10;
     }
 }
