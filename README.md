@@ -20,3 +20,21 @@ gradle markdownToHtml
 ```bash
 ls -lah build/gen-html
 ```
+
+## PostWork 5 ##
+
+Aplicación generada en el sitio [Spring Initializr](https://start.spring.io) con las siguientes configuraciones:
+
+* **Project**: Gradle - Groovy
+* **Language**: Java
+* **Spring Boot**: 2.7.9
+* **Project Metadata**:
+    * **Group**: org.bedu.java.backend
+    * **Artifact**: sesion05-postwork
+    * **Name**: sesion05-postwork
+    * **Description**: Java Beans y la Inversión de Control (IoC)
+    * **Package name**: org.bedu.java.backend.sesion05-postwork
+    * **Packaging**: Jar
+    * **Java**: 11
+
+
