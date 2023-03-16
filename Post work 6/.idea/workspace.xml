@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5b28b9-1c07-4c06-b177-2d7f140d72e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/persistence/AgendaMemoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/service/AgendaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/service/ValidadorTelefono.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/controller/AgendaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/model/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/persistence/AgendaMemoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/persistence/AgendaMemoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/service/AgendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bedu/java/backend/sesion06postwork/service/AgendaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,7 +61,7 @@
     "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Julian/OneDrive/Documentos/GitHub/BEDU-Equipo5-PostWorks/Post work 5"
+    "last_opened_file_path": "C:/Users/pauloz/IdeaProjects/PostWork/Equipo5/pw6-en-equipo/BEDU-Equipo5-PostWorks/Post work 6"
   }
 }]]></component>
   <component name="RecentsManager">

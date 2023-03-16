@@ -1,6 +1,7 @@
 package org.bedu.java.backend.sesion06postwork.persistence;
 
 import org.springframework.stereotype.Repository;
+import org.bedu.java.backend.sesion06postwork.model.Persona;
 
 import java.util.Set;
 import java.util.SortedSet;

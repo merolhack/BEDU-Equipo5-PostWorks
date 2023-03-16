@@ -1,8 +1,11 @@
 package org.bedu.java.backend.sesion06postwork.service;
 
 import org.bedu.java.backend.sesion06postwork.persistence.AgendaMemoryDao;
+import org.bedu.java.backend.sesion06postwork.model.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Set;
 
 @Service
 public class AgendaService {
@@ -17,9 +20,9 @@ public class AgendaService {
     }
 
     public Persona guardaPersona(Persona persona) {
-        if (!validadorTelefono.isValido(persona.getTelefono())) {
+        /*if (!validadorTelefono.isValido(persona.getTelefono())) {
             return null;
-        }
+        }*/
         String telefono = validadorTelefono.limpiaNumero(persona.getTelefono());
 
 
@@ -28,7 +31,6 @@ public class AgendaService {
 
         return agendaDao.guardaPersona(persona);
     }
-
 
     public Set<Persona> getPersonas() {
         return agendaDao.getPersonas();
