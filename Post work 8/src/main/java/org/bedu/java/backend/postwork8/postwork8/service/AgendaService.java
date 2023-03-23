@@ -8,28 +8,28 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class AgendaService {
 
     private final ValidadorTelefono validadorTelefono;
-    private final PersonaRepository personaRepository;
+    private final PersonaRepository personarepository;
 
     @Autowired
-    public AgendaService(ValidadorTelefono validadorTelefono, PersonaRepository personaRepository) {
+    public AgendaService(ValidadorTelefono validadorTelefono, AgendaMemoryDao personarepository) {
         this.validadorTelefono = validadorTelefono;
-        this.personaRepository = personaRepository;
+        this.personarepository = personarepository;
     }
 
     public Persona guardaPersona(Persona persona) {
         String telefono = validadorTelefono.limpiaNumero(persona.getTelefono());
 
-        persona.setTelefono(telefono);
+        this.persona.setTelefono(telefono);
 
-        return personaRepository.save(persona);
+        return this.personarepository.save(persona);
     }
 
     public List<Persona> getPersonas() {
-
-        return personaRepository.findAll(Sort.by("nombre"));
+        return this.personarepository.findAll(Sort.by("nombre")) ;
     }
 }
