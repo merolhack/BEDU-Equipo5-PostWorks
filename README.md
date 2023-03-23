@@ -54,3 +54,23 @@ Aplicación generada en el sitio [Spring Initializr](https://start.spring.io) co
     * **Java**: 11
 * **Dependencias**:
     * Spring Web
+
+## PostWork 7 ##
+
+Aplicación generada en el sitio [Spring Initializr](https://start.spring.io) con las siguientes configuraciones:
+
+* **Project**: Gradle - Groovy
+* **Language**: Java
+* **Spring Boot**: 2.7.9
+* **Project Metadata**:
+    * **Group**: org.bedu.java.backend
+    * **Artifact**: sesion07-postwork
+    * **Name**: sesion07-postwork
+    * **Description**: Introducción a Spring MVC
+    * **Package name**: org.bedu.java.backend.sesion07-postwork
+    * **Packaging**: Jar
+    * **Java**: 11
+* **Dependencias**:
+    * Spring Web
+    * Thymeleaf
+    * Validation
