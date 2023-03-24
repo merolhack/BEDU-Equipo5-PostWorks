@@ -24,7 +24,7 @@ public class AgendaService {
     public Persona guardaPersona(Persona persona) {
         String telefono = validadorTelefono.limpiaNumero(persona.getTelefono());
 
-        this.persona.setTelefono(telefono);
+        persona.setTelefono(telefono);
 
         return this.personarepository.save(persona);
     }
