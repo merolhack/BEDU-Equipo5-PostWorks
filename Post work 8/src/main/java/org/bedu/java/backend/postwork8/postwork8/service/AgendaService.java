@@ -16,7 +16,7 @@ public class AgendaService {
     private final PersonaRepository personarepository;
 
     @Autowired
-    public AgendaService(ValidadorTelefono validadorTelefono, AgendaMemoryDao personarepository) {
+    public AgendaService(ValidadorTelefono validadorTelefono, PersonaRepository personarepository) {
         this.validadorTelefono = validadorTelefono;
         this.personarepository = personarepository;
     }
