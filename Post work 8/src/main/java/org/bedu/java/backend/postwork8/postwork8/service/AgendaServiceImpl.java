@@ -10,17 +10,18 @@ import java.util.List;
 
 
 @Service
-public class AgendaService {
+public class AgendaServiceImpl implements AgendaService {
 
     private final ValidadorTelefono validadorTelefono;
     private final PersonaRepository personarepository;
 
     @Autowired
-    public AgendaService(ValidadorTelefono validadorTelefono, PersonaRepository personarepository) {
+    public AgendaServiceImpl(ValidadorTelefono validadorTelefono, PersonaRepository personarepository) {
         this.validadorTelefono = validadorTelefono;
         this.personarepository = personarepository;
     }
 
+    @Override
     public Persona guardaPersona(Persona persona) {
         String telefono = validadorTelefono.limpiaNumero(persona.getTelefono());
 
@@ -29,6 +30,7 @@ public class AgendaService {
         return this.personarepository.save(persona);
     }
 
+    @Override
     public List<Persona> getPersonas() {
         return this.personarepository.findAll(Sort.by("nombre")) ;
     }

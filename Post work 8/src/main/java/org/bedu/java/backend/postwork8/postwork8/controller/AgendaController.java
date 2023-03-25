@@ -1,7 +1,7 @@
 package org.bedu.java.backend.postwork8.postwork8.controller;
 
 import org.bedu.java.backend.postwork8.postwork8.model.Persona;
-import org.bedu.java.backend.postwork8.postwork8.service.AgendaService;
+import org.bedu.java.backend.postwork8.postwork8.service.AgendaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +14,11 @@ import javax.validation.Valid;
 @Controller
 public class AgendaController {
 
-    private final AgendaService agendaService;
+    private final AgendaServiceImpl agendaService;
 
 
     @Autowired
-    public AgendaController(AgendaService agendaService) {
+    public AgendaController(AgendaServiceImpl agendaService) {
         this.agendaService = agendaService;
     }
 
