@@ -28,7 +28,11 @@ public class AgendaService {
 
         return this.personarepository.save(persona);
     }
-
+    
+    public boolean validaTelefono(Persona persona) {
+        return  this.validadorTelefono.isValido(persona.getTelefono());
+    }
+   
     public List<Persona> getPersonas() {
         return this.personarepository.findAll(Sort.by("nombre")) ;
     }
