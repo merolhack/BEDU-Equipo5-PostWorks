@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface AgendaService {
     Persona guardaPersona(Persona persona);
-
+    
     List<Persona> getPersonas();
 }

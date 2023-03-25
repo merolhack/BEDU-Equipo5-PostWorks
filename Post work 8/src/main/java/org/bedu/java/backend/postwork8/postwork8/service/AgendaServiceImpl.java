@@ -12,8 +12,8 @@ import java.util.List;
 @Service
 public class AgendaServiceImpl implements AgendaService {
 
-    private final ValidadorTelefono validadorTelefono;
-    private final PersonaRepository personarepository;
+    private ValidadorTelefono validadorTelefono;
+    private PersonaRepository personarepository;
 
     @Autowired
     public AgendaServiceImpl(ValidadorTelefono validadorTelefono, PersonaRepository personarepository) {
@@ -21,7 +21,6 @@ public class AgendaServiceImpl implements AgendaService {
         this.personarepository = personarepository;
     }
 
-    @Override
     public Persona guardaPersona(Persona persona) {
         String telefono = validadorTelefono.limpiaNumero(persona.getTelefono());
 
@@ -30,7 +29,10 @@ public class AgendaServiceImpl implements AgendaService {
         return this.personarepository.save(persona);
     }
 
-    @Override
+    public boolean validaTelefono(Persona persona) {
+        return  this.validadorTelefono.isValido(persona.getTelefono());
+    }
+
     public List<Persona> getPersonas() {
         return this.personarepository.findAll(Sort.by("nombre")) ;
     }

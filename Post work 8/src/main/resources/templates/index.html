@@ -11,16 +11,17 @@
 <div class="container">
     <main>
         <div class="py-5 text-center">
-            <h1>Agregar nuevo registro a la agenda</h1>
+            <h1>Agenda Equipo 5</h1>
         </div>
         <div class="row g-5">
             <div class="col-md-6 col-lg-6">
+                <h3 style="text-align:center;">Agregar nuevo registro a la agenda</h3>
                 <form th:action="@{/registro}" th:object="${persona}" method="post">
                     <div>
-                        <label for="nombre" class="form-label">Nombre:</label>
+                        <label for="nombre" class="form-label">Nombre completo:</label>
                         <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" value="" required th:field="*{nombre}" th:classappend="${not #lists.isEmpty(#fields.errors('nombre'))} ? is-invalid">
                         <div class="invalid-feedback">
-                            <div th:each="error: ${#fields.errors('nombre')}" th:if="${#fields.hasErrors('nombre')}" th:errorclass="error" th:errors="*{nombre}"></div>
+                            <div th:if="${#fields.hasErrors('nombre')}" th:errorclass="error" th:errors="*{nombre}"></div>
                         </div>
                     </div>
                     <div>
@@ -29,18 +30,36 @@
                         <div class="invalid-feedback">
                             <div th:each="error: ${#fields.errors('telefono')}" th:if="${#fields.hasErrors('telefono')}" th:errorclass="error" th:errors="*{telefono}"></div>
                         </div>
+                        <div th:if="${#fields.hasErrors('global')}"  class="alert alert-danger" role="alert">
+                            <p>Agenda errors:</p>
+                            <p th:each="err : ${#fields.errors('global')}" th:text="${err}" class="error" />
+                        </div>
                     </div>
                     <input type="submit" class="w-100 btn btn-primary btn-lg" th:value="Guardar"/>
                 </form>
             </div>
-            <div class="col-md-6 col-lg-6">
-                <h3>Agenda:</h3>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm" th:each="registro : ${listaPersonas}" th:text="${ registro.getNombre() + ' ' + registro.getTelefono()}"></li>
-                </ul>
+            <div class="col-md-6 col-lg-6 class='table-responsive'">
+                <h3 style="text-align:center;">Agenda Actual:</h3>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr class="table-primary">
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Telefono</th>
+                </tr>
+                </thead>
+                <tr
+                    th:each="registro, iStat : ${listaPersonas}"
+                    th:alt-title="${iStat.even}? 'even' : 'odd'">
+                    <td th:text="${ iStat.index +1 }" class="text-center"/>
+                    <td th:text="${ registro.getNombre() }" />
+                    <td th:text="${ registro.getTelefono() }" />
+                </tr>
+            </table>
             </div>
+
         </div>
     </main>
 </div>
-</body>
+ </body>
 </html>
