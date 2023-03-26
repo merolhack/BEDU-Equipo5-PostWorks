@@ -5,7 +5,6 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-import java.util.Objects;
 
 @Setter
 @Getter
@@ -23,7 +22,7 @@ public class Persona implements Comparable<Persona> {
     @NotBlank(message = "El nombre de la persona es un campo obligatorio.")
     private String nombre;
 
-    //@Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
+    @Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
     private String telefono;
 
     @Override
